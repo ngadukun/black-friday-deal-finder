@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DealHound — Real Black Friday Deals, Checked Today</title>
+  <meta name="description" content="DealHound lists real Black Friday and Cyber Monday deals, each checked at its store on 27 Nov 2026, with an honest signal for whether it is really a deal.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Black Friday &middot; 27 Nov 2026 &middot; Cyber Monday 30 Nov</p>
+      <h1>DealHound <span class="amber">&mdash; find the real deals.</span></h1>
+      <p class="sub">31 Black Friday and Cyber Monday deals, each found and price-checked at its
+        store today. Every card shows the sale price, the usual price, the discount,
+        when it was checked, where it was read &mdash; and an honest call on whether
+        it is actually a deal.</p>
+      <span id="countdown">Cyber Monday ends soon</span>
+    </div>
+  </header>
+
+  <div id="stats" aria-label="Deal summary"></div>
+
+  <main>
+    <section class="controls" aria-label="Search and filters">
+      <div class="controls-row">
+        <input id="search" type="search" placeholder="Search deals &mdash; try &ldquo;AirPods&rdquo;, &ldquo;OLED&rdquo;, &ldquo;vacuum&rdquo;&hellip;" aria-label="Search deals">
+        <select id="store-filter" aria-label="Filter by store"></select>
+        <select id="discount-filter" aria-label="Minimum discount">
+          <option value="0">Any discount</option>
+          <option value="20">20% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+        <select id="signal-filter" aria-label="Filter by deal signal">
+          <option value="any">Any signal</option>
+          <option value="newlow">New lows only</option>
+          <option value="strong">Strong deals only</option>
+          <option value="routine">Routine sales only</option>
+        </select>
+        <select id="sort" aria-label="Sort deals">
+          <option value="best">Sort: best deals first</option>
+          <option value="discount">Sort: biggest discount</option>
+          <option value="price">Sort: lowest price</option>
+          <option value="savings">Sort: biggest saving</option>
+        </select>
+      </div>
+      <div id="categories" role="group" aria-label="Filter by category"></div>
+    </section>
+
+    <p id="result-count">Showing deals&hellip;</p>
+    <div id="deal-grid"></div>
+
+    <section class="method">
+      <h2>How DealHound checks a deal</h2>
+      <p id="checked-note"></p>
+      <ul>
+        <li><strong>NEW LOW</strong> &mdash; the lowest price reported anywhere for that product this season.</li>
+        <li><strong>STRONG DEAL</strong> &mdash; a deep, genuine cut well below the usual price.</li>
+        <li><strong>ROUTINE SALE</strong> &mdash; a small cut, or a discount flattered by a raised list price. Worth knowing, not worth rushing for.</li>
+      </ul>
+      <p>Store links go to the store&rsquo;s own search for the product, so the link opens
+        the matching product at that store. Prices move during the sale &mdash; if a
+        price has changed since the check time on the card, the store&rsquo;s live page wins.</p>
+    </section>
+  </main>
+
+  <footer>
+    DealHound &mdash; an independent deal finder. Not affiliated with Amazon, Best Buy,
+    Walmart, Target, or any brand named on this page.
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
